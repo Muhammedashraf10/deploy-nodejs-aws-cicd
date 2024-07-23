@@ -13,8 +13,6 @@ jobs:
 
       - name: Deploy to my EC2 instance
         uses: easingthemes/ssh-deploy@v3.0.1
-      - name: Print new build number
-        run: bench --version
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH }}
           SOURCE: "./"
